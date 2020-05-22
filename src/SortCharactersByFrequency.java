@@ -19,6 +19,8 @@ public class SortCharactersByFrequency {
             for (int i = 0; i < map.get(c); i++) {
                 ans.append(c);
             }
+            // In Java 11 + the above loop can be replaced with below code
+            // ans.append(String.valueOf(c).repeat(map.get(c)));
         }
         return ans.toString();
     }
