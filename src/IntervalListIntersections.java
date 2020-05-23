@@ -1,61 +1,23 @@
 import java.util.ArrayList;
 
+// Problem Statement: https://leetcode.com/problems/interval-list-intersections/
+
 public class IntervalListIntersections {
     public int[][] intervalIntersection(int[][] A, int[][] B) {
-        ArrayList<Integer> temp = new ArrayList<>();
+        ArrayList<int[]> res = new ArrayList<>();
         int i = 0, j = 0;
         while (i < A.length && j < B.length) {
-            if (A[i][0] < B[j][0]) { // A started before
-                // A end didn't touch B start
-                if (A[i][1] < B[j][0]) i++; // then we can go to next item in A
-                else if (A[i][1] == B[j][0]) { // A end equals B start
-                    temp.add(A[i][1]); // Both the elements will be same
-                    temp.add(B[j][0]);
-                    i++;
-                } else { // A end is after B start
-                    // A end can be less, equal or more than B end
-                    temp.add(B[j][0]); // B start
-                    if (A[i][1] >= B[j][1]) { // A end same or after B end
-                        temp.add(B[j][1]);
-                        if (A[i][1] == B[j][1]) i++; // If ends are equal move A to next item
-                        j++; // B is fully in A, so move B to next item
-                    }
-                    else { // A end is Before B end
-                        temp.add(A[i][1]);
-                        i++; // Add a end and Move A to next item
-                    }
-                }
-            } else { // B started before
-                // B end didn't touch A start
-                if (B[j][1] < A[i][0]) j++; // then we can go to next item in B
-                else if (B[j][1] == A[i][0]) { // B end equals A start
-                    temp.add(B[j][1]); // Both the elements will be same
-                    temp.add(A[i][0]);
-                    j++;
-                } else { // B end is after A start
-                    // B end can be less, equal or more than A end
-                    temp.add(A[i][0]); // A start
-                    if (B[j][1] >= A[i][1]) { // B end same or after A end
-                        temp.add(A[i][1]);
-                        if (B[j][1] == A[i][1]) j++; // If ends are equal move B to next item
-                        i++; // A is fully in B, so move A to next item
-                    }
-                    else { // B end is Before A end
-                        temp.add(B[j][1]);
-                        j++; // Add B end and Move B to next item
-                    }
-                }
-            }
+            int low = Math.max(A[i][0], B[j][0]);
+            int high = Math.min(A[i][1], B[j][1]);
+            if (low <= high)
+                res.add(new int[]{low, high});
+            if (A[i][1] < B[j][1])
+                i++;
+            else
+                j++;
+
         }
-        int size = temp.size()/2;
-        int[][] res = new int[size][];
-        int idx = 0;
-        for (int k = 0; k < size; k++) res[k] = new int[2];
-        for (int k = 0; k < size; k++) {
-            res[k][0] = temp.get(idx++);
-            res[k][1] = temp.get(idx++);
-        }
-        return res;
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String[] args) {
@@ -90,5 +52,12 @@ public class IntervalListIntersections {
             }
             System.out.println();
         }
+        /*
+            Test Case 2 (edge case)
+            A = [[3,5],[9,20]]
+            B = [[4,5],[7,10],[11,12],[14,15],[16,20]]
+
+            Test Case 3 (exchange A and B in Test Case 1 and 2)
+         */
     }
 }
