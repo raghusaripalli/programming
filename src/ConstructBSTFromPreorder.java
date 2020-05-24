@@ -1,5 +1,7 @@
 import java.util.Stack;
 
+// Problem Statement: https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+
 public class ConstructBSTFromPreorder {
     public TreeNode bstFromPreorder(int[] preorder) {
         // Pre order [root, left, right]
@@ -38,6 +40,13 @@ public class ConstructBSTFromPreorder {
         }
     }
 
+    public void printInorder(TreeNode root) {
+        if (root == null) return;
+        printInorder(root.left);
+        System.out.print(root.val + " ");
+        printInorder(root.right);
+    }
+
     public static void main(String[] args) {
         ConstructBSTFromPreorder cb = new ConstructBSTFromPreorder();
         // Test Case - [8,5,1,7,10,12]
@@ -49,5 +58,6 @@ public class ConstructBSTFromPreorder {
         arr[4] = 10;
         arr[5] = 12;
         TreeNode res = cb.bstFromPreorder(arr);
+        cb.printInorder(res);
     }
 }
