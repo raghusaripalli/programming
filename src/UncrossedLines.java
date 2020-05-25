@@ -1,3 +1,6 @@
+// Problem Statement - https://leetcode.com/problems/uncrossed-lines/
+// Medium - DP
+
 public class UncrossedLines {
     public int maxUncrossedLines(int[] A, int[] B) {
         int aSize = A.length, bSize = B.length;
@@ -26,5 +29,9 @@ public class UncrossedLines {
         B[2] = 4;
         int res = lines.maxUncrossedLines(A, B);
         System.out.println(res);
+
+        // Edge Cases
+        // A = [1,2,3,4], B = [2,3,4,1]
+        // A = [1,2,3,4], B= [4,3,2,1]
     }
 }
