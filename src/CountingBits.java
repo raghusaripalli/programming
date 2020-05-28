@@ -1,4 +1,8 @@
+// Problem Statement: https://leetcode.com/problems/counting-bits/
+// DP, Bit Manipulation
+
 public class CountingBits {
+    // Try Seeing the pattern between [2, 3], [4, 7], [8, 15] and [16, 31]. Each series depends on the before series answer pattern
     public int[] countBits(int num) {
         int[] res = new int[++num];
         int i = 0, startIdx = 2, endIdx = 4, j = 4;
@@ -26,6 +30,7 @@ public class CountingBits {
 
     public static void main(String[] args) {
         CountingBits countingBits = new CountingBits();
+        // Test Case
         int[] res = countingBits.countBits(31);
         for (int re : res) {
             System.out.print(re + " ");
