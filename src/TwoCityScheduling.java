@@ -1,3 +1,6 @@
+// Problem Statement: https://leetcode.com/problems/two-city-scheduling/
+// Greedy
+
 import java.util.Arrays;
 
 public class TwoCityScheduling {
@@ -15,6 +18,17 @@ public class TwoCityScheduling {
             sum += refund[i];
         }
         return sum;
+    }
+
+    // Alternative solution
+    public int twoCitySchedCost2(int[][] costs) {
+        Arrays.sort(costs, (p1, p2) -> (p1[0] - p2[0]) - (p1[1] - p2[1]));
+        int minCost = 0;
+        for (int i = 0; i < costs.length / 2; i++) {
+            minCost += costs[i][0];
+            minCost += costs[costs.length / 2 + i][1];
+        }
+        return minCost;
     }
 
     public static void main(String[] args) {
