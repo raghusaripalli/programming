@@ -1,4 +1,4 @@
-// Problem Statement: https://leetcode.com/problems/delete-node-in-a-linked-list/
+package leetcode;// Problem Statement: https://leetcode.com/problems/delete-node-in-a-linked-list/
 
 public class DeleteNodeInLL {
     private ListNode root;

@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.ArrayList;
 
 // Problem Statement: https://leetcode.com/problems/interval-list-intersections/

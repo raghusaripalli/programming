@@ -1,4 +1,4 @@
-// Problem Statement: https://leetcode.com/problems/possible-bipartition/
+package leetcode;// Problem Statement: https://leetcode.com/problems/possible-bipartition/
 // Graph - DFS - Bipartate
 
 public class PossibleBipartition {

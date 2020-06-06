@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.*;
 
 // Problem Statement: https://leetcode.com/problems/course-schedule/

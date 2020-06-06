@@ -1,4 +1,4 @@
-// Problem Statement: https://leetcode.com/problems/two-city-scheduling/
+package leetcode;// Problem Statement: https://leetcode.com/problems/two-city-scheduling/
 // Greedy
 
 import java.util.Arrays;

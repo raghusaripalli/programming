@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.HashMap;
 
 // Problem Statement: https://leetcode.com/problems/contiguous-array/

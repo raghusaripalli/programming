@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.PriorityQueue;
 
 // Problem Statement: https://leetcode.com/problems/k-closest-points-to-origin/
