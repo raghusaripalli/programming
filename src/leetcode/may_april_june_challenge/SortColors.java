@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.may_april_june_challenge;
 
 // Reference: https://en.wikipedia.org/wiki/Dutch_national_flag_problem
 

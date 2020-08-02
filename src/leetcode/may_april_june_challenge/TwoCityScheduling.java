@@ -1,4 +1,4 @@
-package leetcode;// Problem Statement: https://leetcode.com/problems/two-city-scheduling/
+package leetcode.may_april_june_challenge;// Problem Statement: https://leetcode.com/problems/two-city-scheduling/
 // Greedy
 
 import java.util.Arrays;

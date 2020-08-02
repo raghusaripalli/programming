@@ -1,4 +1,4 @@
-package leetcode;// Problem Statement: https://leetcode.com/problems/counting-bits/
+package leetcode.may_april_june_challenge;// Problem Statement: https://leetcode.com/problems/counting-bits/
 // DP, Bit Manipulation
 
 public class CountingBits {

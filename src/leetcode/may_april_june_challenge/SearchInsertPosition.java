@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.may_april_june_challenge;
 
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {

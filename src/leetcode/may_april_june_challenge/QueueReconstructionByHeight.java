@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.may_april_june_challenge;
 
 import java.util.Arrays;
 import java.util.LinkedList;

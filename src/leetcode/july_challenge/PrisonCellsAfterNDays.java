@@ -1,6 +1,6 @@
 package leetcode.july_challenge;
 
-import leetcode.Helper;
+import leetcode.may_april_june_challenge.Helper;
 
 import java.util.ArrayList;
 import java.util.List;

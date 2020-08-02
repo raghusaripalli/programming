@@ -1,4 +1,4 @@
-package leetcode;// Problem Statement - https://leetcode.com/problems/uncrossed-lines/
+package leetcode.may_april_june_challenge;// Problem Statement - https://leetcode.com/problems/uncrossed-lines/
 // Medium - DP
 
 public class UncrossedLines {
