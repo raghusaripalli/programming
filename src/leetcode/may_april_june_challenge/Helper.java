@@ -20,4 +20,11 @@ public class Helper {
         }
         return arr.stream().mapToInt(i -> i).toArray();
     }
+
+    public static void prettyPrint(List<Integer> list) {
+        for (Integer item : list) {
+            System.out.print(item + " ");
+        }
+        System.out.println();
+    }
 }
