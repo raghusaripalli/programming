@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class MaximumNumberOfCoinsYouCanGet {
 
-    public int maxCoins(int[] piles) {
+    // 43ms
+    public int maxCoins1(int[] piles) {
         Arrays.sort(piles);
         int bob = 0, alice = piles.length - 1;
         int me = alice - 1, res = 0;
@@ -17,6 +18,14 @@ public class MaximumNumberOfCoinsYouCanGet {
             me = alice - 1;
         }
         return res;
+    }
+
+    // 25ms
+    public int maxCoins(int[] piles) {
+        int ans = 0;
+        Arrays.sort(piles);
+        for (int i = piles.length / 3; i < piles.length; i += 2) ans += piles[i];
+        return ans;
     }
 
     public static void main(String[] args) {
