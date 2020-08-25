@@ -35,5 +35,7 @@ public class MinimumCostForTickets {
         System.out.println(mc.mincostTickets(days, costs));
         days = Helper.parseIntegerArray("[1,2,3,4,5,6,7,8,9,10,30,31]");
         System.out.println(mc.mincostTickets(days, costs));
+        days = Helper.parseIntegerArray("[1,2,10,30,31]");
+        System.out.println(mc.mincostTickets(days, costs));
     }
 }
