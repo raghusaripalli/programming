@@ -1,4 +1,4 @@
-package leetcode.sorting;
+package sorting;
 
 import leetcode.may_april_june_challenge.Helper;
 

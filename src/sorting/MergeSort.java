@@ -1,4 +1,4 @@
-package leetcode.sorting;
+package sorting;
 
 public class MergeSort {
 
