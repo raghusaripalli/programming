@@ -1,4 +1,4 @@
-package codechef.dsa_learning_series.LRNDSA01;
+package codechef;
 
 import java.util.Scanner;
 
