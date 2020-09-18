@@ -1,36 +1,37 @@
 package datastructures;
 
-public class SymbolTable<Key extends Comparable, Value> {
+public class SymbolTable<Key extends Comparable<Key>, Value> {
+    private BST<Key, Value> bst;
 
     SymbolTable() {
-
+        bst = new BST<>();
     }
 
-    void put(Key key, Value value) {
-
+    public void put(Key key, Value value) {
+        bst.put(key, value);
     }
 
-    Value get(Key key) {
-        return null;
+    public Value get(Key key) {
+        return bst.get(key);
     }
 
-    void delete(Key key) {
+    public void delete(Key key) {
         put(key, null);
     }
 
-    boolean contains(Key key) {
+    public boolean contains(Key key) {
         return get(key) != null;
     }
 
-    boolean isEmpty() {
-        return true;
+    public boolean isEmpty() {
+        return size() == 0;
     }
 
-    int size() {
-        return 0;
+    public int size() {
+        return bst.size();
     }
 
-    Iterable<Key> keys() {
-        return null;
+    public Iterable<Key> keys() {
+        return bst.keys();
     }
 }
